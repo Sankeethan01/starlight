@@ -15,7 +15,7 @@ type CartState = {
 }
 
 export const useCartStore = create<CartState>((set) => ({
-  cart : { lineItems: [], subtotal: { amount: 0 } },
+  cart : { lineItems: [] },
   isLoading: true,
   counter: 0,
   isLoggedIn: false,
@@ -85,7 +85,7 @@ export const useCartStore = create<CartState>((set) => ({
       await wixClient.currentCart.deleteCurrentCart();
 
       set({
-        cart: { lineItems: [], subtotal: { amount: 0 } }, 
+        cart: { lineItems: [] }, 
         counter: 0,
         isLoading: false,
       });
