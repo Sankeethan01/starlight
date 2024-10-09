@@ -25,7 +25,7 @@ const NavIcons = () => {
     const wixedLogin = async () => {
       try {
         const loginRequestData = wixClient.auth.generateOAuthData(
-          "/oAuth-callback",
+          "https://starlightonlineshopping.vercel.app/oAuth-callback",
         ); // Pointing to the callback URL
 
         localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));

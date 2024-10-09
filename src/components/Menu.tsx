@@ -22,7 +22,7 @@ const Menu = () => {
         const wixedLogin = async () => {
             try {
                 const loginRequestData = wixClient.auth.generateOAuthData(
-                    "http://localhost:3000/oAuth-callback",
+                    "https://starlightonlineshopping.vercel.app/oAuth-callback",
                 ); // Pointing to the callback URL
 
                 localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));
