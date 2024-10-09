@@ -25,7 +25,7 @@ const NavIcons = () => {
     const wixedLogin = async () => {
       try {
         const loginRequestData = wixClient.auth.generateOAuthData(
-          "http://localhost:3000/oAuth-callback",
+          "/oAuth-callback",
         ); // Pointing to the callback URL
 
         localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));
