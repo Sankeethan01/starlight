@@ -82,7 +82,7 @@ const Slider = () => {
                  onTransitionEnd={handleTransitionEnd}>
                  
                 {/* Clone last slide before the first one */}
-                <div className={`${slides[totalSlides - 1].bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}>
+                <div className={`${slides[totalSlides - 1].bg} w-screen h-full flex flex-col gap-16 xl:flex-row 2xl:flex-row`}>
                     <div className='h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center'>
                         <h2 className='text-lg lg:text-2xl 2xl:text-3xl'>{slides[totalSlides - 1].description}</h2>
                         <h1 className='text-xl lg:text-3xl 2xl:text-4xl font-semibold'>{slides[totalSlides - 1].title}</h1>
@@ -97,7 +97,7 @@ const Slider = () => {
 
                 {/* Main slides */}
                 {slides.map((slide) => (
-                    <div key={slide.id} className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}>
+                    <div key={slide.id} className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row 2xl:flex-row`}>
                         <div className='h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center'>
                             <h2 className='text-xl lg:text-3xl 2xl:text-5xl'>{slide.description}</h2>
                             <h1 className='text-5xl lg:text-6xl 2xl:text-8xl font-semibold'>{slide.title}</h1>
@@ -112,7 +112,7 @@ const Slider = () => {
                 ))}
 
                 {/* Clone first slide after the last one */}
-                <div className={`${slides[0].bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}>
+                <div className={`${slides[0].bg} w-screen h-full flex flex-col gap-16 xl:flex-row 2xl:flex-row`}>
                     <div className='h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center'>
                         <h2 className='text-xl lg:text-3xl 2xl:text-5xl'>{slides[0].description}</h2>
                         <h1 className='text-5xl lg:text-6xl 2xl:text-8xl font-semibold'>{slides[0].title}</h1>

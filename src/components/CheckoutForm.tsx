@@ -62,7 +62,7 @@ const CheckoutForm = () => {
       ) : (
         <form
         onSubmit={handleSubmit}
-        className="w-1/3 mx-auto p-6 bg-white rounded-lg shadow-lg"
+        className="w-1/2 lg:w-1/3 mx-auto p-6 bg-white rounded-lg shadow-lg"
       >
         <h2 className="text-2xl font-bold text-center mb-6">Checkout</h2>
         <div className="flex flex-col space-y-4">
