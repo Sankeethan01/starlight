@@ -78,11 +78,11 @@ const Slider = () => {
     return (
         <div className='h-[calc(100vh-80px)] overflow-hidden relative'>
             <div className={`w-max h-full flex ${isTransitioning ? 'transition-all ease-in-out duration-1000' : ''}`}
-                 style={{ transform: `translateX(-${current * 100}vw)` }}
-                 onTransitionEnd={handleTransitionEnd}>
-                 
+                style={{ transform: `translateX(-${current * 100}vw)` }}
+                onTransitionEnd={handleTransitionEnd}>
+
                 {/* Clone last slide before the first one */}
-                <div className={`${slides[totalSlides - 1].bg} w-screen h-full flex flex-col gap-16 xl:flex-row 2xl:flex-row`}>
+                <div className={`${slides[totalSlides - 1].bg} w-screen h-full flex flex-col xl:flex-row 2xl:flex-row gap-16`}>
                     <div className='h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center'>
                         <h2 className='text-lg lg:text-2xl 2xl:text-3xl'>{slides[totalSlides - 1].description}</h2>
                         <h1 className='text-xl lg:text-3xl 2xl:text-4xl font-semibold'>{slides[totalSlides - 1].title}</h1>
@@ -91,13 +91,13 @@ const Slider = () => {
                         </Link>
                     </div>
                     <div className='relative xl:h-full h-1/2 xl:w-1/2'>
-                        <Image src={slides[totalSlides - 1].img} alt={slides[totalSlides - 1].title} fill sizes='100%' className='object-cover'/>
+                        <Image src={slides[totalSlides - 1].img} alt={slides[totalSlides - 1].title} fill sizes='100%' className='object-cover' />
                     </div>
                 </div>
 
                 {/* Main slides */}
                 {slides.map((slide) => (
-                    <div key={slide.id} className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row 2xl:flex-row`}>
+                    <div key={slide.id} className={`${slide.bg} w-screen h-full flex flex-col xl:flex-row 2xl:flex-row gap-16`}>
                         <div className='h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center'>
                             <h2 className='text-xl lg:text-3xl 2xl:text-5xl'>{slide.description}</h2>
                             <h1 className='text-5xl lg:text-6xl 2xl:text-8xl font-semibold'>{slide.title}</h1>
@@ -106,13 +106,13 @@ const Slider = () => {
                             </Link>
                         </div>
                         <div className='relative xl:h-full h-1/2 xl:w-1/2'>
-                            <Image src={slide.img} alt={slide.title} fill sizes='100%' className='object-cover'/>
+                            <Image src={slide.img} alt={slide.title} fill sizes='100%' className='object-cover' />
                         </div>
                     </div>
                 ))}
 
                 {/* Clone first slide after the last one */}
-                <div className={`${slides[0].bg} w-screen h-full flex flex-col gap-16 xl:flex-row 2xl:flex-row`}>
+                <div className={`${slides[0].bg} w-screen h-full flex flex-col xl:flex-row 2xl:flex-row gap-16`}>
                     <div className='h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center'>
                         <h2 className='text-xl lg:text-3xl 2xl:text-5xl'>{slides[0].description}</h2>
                         <h1 className='text-5xl lg:text-6xl 2xl:text-8xl font-semibold'>{slides[0].title}</h1>
@@ -121,9 +121,11 @@ const Slider = () => {
                         </Link>
                     </div>
                     <div className='relative xl:h-full h-1/2 xl:w-1/2'>
-                        <Image src={slides[0].img} alt={slides[0].title} fill sizes='100%' className='object-cover'/>
+                        <Image src={slides[0].img} alt={slides[0].title} fill sizes='100%' className='object-cover' />
                     </div>
                 </div>
+
+
             </div>
             <div className='absolute m-auto left-1/2 bottom-8 flex gap-4'>
                 {slides.map((_, index) => (
